@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+          maximum-scale=1.0, user-scalable=no">
+
+    <title>NovaCraft 3D</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <div id="game-container"></div>
+  
+<!-- MENÚ PRINCIPAL -->
+<div id="main-menu">
+    <div id="main-menu-panel">
+        <h1>NOVACRAFT 3D</h1>
+        <p>Selecciona tu mundo</p>
+
+        <button id="world-survival">
+            🌳 Normal Survival
+        </button>
+
+        <button id="world-test">
+            🧪 TestWorld
+        </button>
+
+        <button id="instructions-button">
+            📖 Instrucciones
+        </button>
+    </div>
+</div>
+
+<!-- INSTRUCCIONES -->
+<div id="instructions-menu">
+    <div id="instructions-panel">
+        <h2>📖 INSTRUCCIONES</h2>
+
+        <h3>🎮 Controles</h3>
+        <p>🕹️ Joystick: moverse.</p>
+        <p>👆 Pantalla derecha: mirar alrededor.</p>
+        <p>⬆️ Saltar: saltar.</p>
+        <p>⬇️ Agacharse: agacharse.</p>
+        <p>🏃 Correr: activar o desactivar carrera.</p>
+
+        <h3>⛏️ Construcción</h3>
+        <p>⛏️ Minar: mantener pulsado para romper bloques.</p>
+        <p>🧱 Colocar: colocar el bloque seleccionado.</p>
+
+        <h3>🎒 Inventario</h3>
+        <p>Selecciona un espacio de la barra rápida para cambiar de bloque.</p>
+        <p>Abre la mochila para organizar tus objetos.</p>
+
+        <h3>🌍 Modos de juego</h3>
+        <p>🌳 Normal Survival: consigue recursos y construye.</p>
+        <p>🧪 TestWorld: prueba los bloques disponibles.</p>
+
+        <button id="instructions-back">
+            ⬅ Volver
+        </button>
+    </div>
+</div>
+
+    <div id="loading">
+        <h1>NovaCraft 3D</h1>
+        <p>Preparando el mundo...</p>
+    </div>
+
+    <div id="hud" class="menu-hidden">
+    <div id="crosshair">+</div>
+      <button id="pause">Ⅱ</button>
+      <div id="pause-menu">
+    <div id="pause-panel">
+        <h2>PAUSA</h2>
+
+        <button id="resume">▶ Continuar</button>
+        <button id="restart">↻ Reiniciar mundo</button>
+        <button id="exit">⌂ Menú principal</button>
+    </div>
+      </div>
+
+    <div id="controls">
+        <div id="joystick">
+            <div id="joystick-knob"></div>
+        </div>
+
+        <button id="jump">↑</button>
+        <button id="crouch">⬇</button>
+      <button id="sprint">🏃</button>
+        <button id="mine">⛏</button>
+        <button id="place">▧</button>
+
+        <button id="inventory-toggle">🎒</button>
+
+        <div id="inventory">
+            <div id="inventory-main">
+                <button id="inventory-close">✖</button>
+              <button id="move-toggle">↔ MOVER</button>
+              <div id="crafting-interface">
+
+    <!-- LIBRO DE RECETAS -->
+    <div id="recipe-book">
+        <h3>RECETAS</h3>
+                <div id="recipe-list">
+            <button class="recipe-item" id="recipe-test">
+                🧱 Bloque de prueba
+            </button>
+        </div>
+    </div> <!-- Cierre de recipe-book -->
+
+    <!-- ZONA DE FABRICACIÓN -->
+    <div id="crafting-area">
+        <h3>FABRICACIÓN</h3>
+
+        <div id="crafting-grid">
+            <div class="craft-slot"></div>
+            <div class="craft-slot"></div>
+            <div class="craft-slot"></div>
+            <div class="craft-slot"></div>
+        </div>
+
+        <div id="craft-arrow">➜</div>
+
+        <div id="craft-result"></div>
+
+        <button id="craft-button" disabled>
+            Fabricar
+        </button>
+    </div>
+
+</div>
+                <div id="inventory-grid"></div>
+            </div>
+
+            <div id="hotbar">
+                <button class="slot selected" data-slot="0"></button>
+                <button class="slot" data-slot="1"></button>
+                <button class="slot" data-slot="2"></button>
+                <button class="slot" data-slot="3"></button>
+                <button class="slot" data-slot="4"></button>
+                <button class="slot" data-slot="5"></button>
+                <button class="slot" data-slot="6"></button>
+                <button class="slot" data-slot="7"></button>
+                <button class="slot" data-slot="8"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mining-progress">
+        <div id="mining-bar"></div>
+    </div>
+    </div>
+
+    <script type="module" src="Game.js"></script>
+
+</body>
+</html>
